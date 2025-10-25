@@ -1,0 +1,71 @@
+
+
+.titulo{
+    color: rgb(255, 0, 0);
+    font-size: 24px;
+    text-align: center;
+}
+.subtitulo{
+    color: rgb(0, 0, 255);
+    font-size: 20px;
+    text-align: center;
+}
+.alerta{
+    color: rgb(10, 10, 10);
+    background-color: rgb(255, 0, 0);
+    
+    font-size: 30px;
+    text-align: center;
+}
+
+.passo1{    
+    font-size: 30px;
+    text-align: center;
+}
+
+.lista1{
+    color: rgb(156, 70, 12);
+    background-color: rgb(200, 200, 200);
+    font-size: 40px;
+    
+}
+
+.ruko2{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
+}
+.roku{
+    color: rgb(7, 97, 156);
+    
+    font-size: 20px;
+    text-align: center;
+}
+.codigo{
+    color: rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+    font-size: 20px;
+    text-align: center;
+}
+
+.lista2{
+    color: rgb(163, 70, 8);
+    background-color: rgb(200, 200, 200);
+    font-size: 30px;
+    
+}
+
+.numero{
+    color: rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+    font-size: 25px;
+    text-align: center;
+}
+
+.whats{
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 211, 102);
+    font-size: 30px;
+    text-align: center;
+}

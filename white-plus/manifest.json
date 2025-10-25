@@ -1,0 +1,63 @@
+{
+  "name": "White Plus - O Futuro do Streaming",
+  "short_name": "White Plus",
+  "description": "A revolução do streaming com mais de 60.000 conteúdos em 4K por apenas R$19,90/mês",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0a0a0f",
+  "background_color": "#0a0a0f",
+  "categories": ["entertainment", "video", "streaming"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "img/logoprincipal.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "img/logoprincipal.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img/strim.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver Planos",
+      "url": "/#planos",
+      "description": "Acesse nossos planos de assinatura"
+    },
+    {
+      "name": "Suporte",
+      "url": "/#suporte",
+      "description": "Entre em contato com nosso suporte"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+whiteplus",
+      "url": "/?action=%s"
+    }
+  ]
+}

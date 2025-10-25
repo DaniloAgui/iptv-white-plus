@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="description" content="White Plus - A revolução do streaming. Mais de 60.000 conteúdos em 4K por apenas R$19,90/mês">
+    <meta name="keywords" content="streaming, netflix, disney+, hbo max, filmes, séries, 4k">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>White Plus - O Futuro do Streaming</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="app.js" as="script">
+    <link rel="preload" href="img/strim.jpg" as="image">
+    
+    <!-- Fonts with display=swap for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logoprincipal.webp">
+    <link rel="apple-touch-icon" href="img/logoprincipal.webp">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Critical CSS Inline -->
+    <style>
+        .loading-screen { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: #0a0a0f; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            z-index: 10000; 
+        }
+        .loader { 
+            width: 50px; 
+            height: 50px; 
+            border: 3px solid rgba(102, 126, 234, 0.3); 
+            border-top: 3px solid #667eea; 
+            border-radius: 50%; 
+            animation: spin 1s linear infinite; 
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-container">
+            <div class="loader"></div>
+            <div class="loading-text">Carregando experiência...</div>
+            <div class="loading-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CURSOR CUSTOM -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- THEME TOGGLE -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- MENU FIXO -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="img/logoprincipal.webp" alt="White Plus" />
+                <span>White Plus</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#">Início</a>
+                <a href="#planos">Planos</a>
+                <a href="#suporte">Suporte</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="barra-topo">
+            <p>🔥 Promoção de lançamento: Assine agora por apenas R$19,90/mês! 🔥</p>
+        </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-icon">🔥</span>
+                <span>Mais de 100.000 usuários satisfeitos</span>
+            </div>
+            <h1 class="hero-title">
+                O Streaming <span class="gradient-text">Completo</span><br>
+                que Você Merece
+            </h1>
+            <p class="hero-subtitle">
+                Tenha acesso a Netflix, Disney+, HBO Max, Amazon Prime, Globoplay e muito mais - 
+                <strong>tudo em um só lugar</strong> por apenas <span class="hero-price">R$19,90/mês</span>
+            </p>
+            
+            <!-- Plataformas -->
+            <div class="platforms-showcase">
+                <div class="platform-item">
+                    <img src="img/net.jpeg" alt="Netflix">
+                </div>
+                <div class="platform-item">
+                    <img src="img/disney.jpeg" alt="Disney+">
+                </div>
+                <div class="platform-item">
+                    <img src="img/hbo.jpeg" alt="HBO Max">
+                </div>
+                <div class="platform-item">
+                    <img src="img/Amazon-Prime-Video.jpg" alt="Amazon Prime">
+                </div>
+                <div class="platform-item">
+                    <img src="img/globo.jpeg" alt="Globoplay">
+                </div>
+                <div class="platform-item">
+                    <img src="img/premiere.png" alt="Premiere">
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="btn-primary">
+                    <span class="btn-icon">🚀</span>
+                    Começar Agora
+                </a>
+                <a href="#planos" class="btn-secondary">
+                    <span class="btn-icon">💡</span>
+                    Ver Planos
+                </a>
+            </div>
+
+           
+
+            <div class="hero-guarantee">
+                <div class="guarantee-icon">✅</div>
+                <div class="guarantee-text">
+                    <strong>Garantia de 7 dias</strong> - Cancele quando quiser
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Por que escolher a <span class="gradient-text">White Plus</span>?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multi-dispositivos</h3>
+                    <p>Assista em qualquer dispositivo: TV, celular, tablet ou computador</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Streaming 4K</h3>
+                    <p>Qualidade Ultra HD 4K com carregamento super rápido</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Sem Bloqueios</h3>
+                    <p>Acesse conteúdo de qualquer país sem restrições geográficas</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Economia Real</h3>
+                    <p>Economize mais de R$500/mês comparado às assinaturas separadas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT CATEGORIES -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">
+                Explore <span class="gradient-text">Categorias</span> Ilimitadas
+            </h2>
+            <p class="section-subtitle">
+                Descubra milhares de conteúdos em todas as categorias imagináveis
+            </p>
+            
+            <div class="categories-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="action">Ação</button>
+                <button class="filter-btn" data-filter="series">Séries</button>
+                <button class="filter-btn" data-filter="comedy">Comédia</button>
+                <button class="filter-btn" data-filter="drama">Drama</button>
+                <button class="filter-btn" data-filter="anime">Anime</button>
+            </div>
+            
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Cineflix -->
+                <div class="category-card" data-category="action">
+                    <div class="card-image">
+                        <img src="img/Cineflix.jpeg" alt="Cineflix" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Cineflix</h3>
+                                <p>Plataforma Original</p>
+                                <div class="card-rating">⭐ 4.9</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">4K Ultra HD</span>
+                        <span class="tech-badge">Dolby Vision</span>
+                    </div>
+                </div>
+
+                <!-- The Last of Us -->
+                <div class="category-card" data-category="series">
+                    <div class="card-image">
+                        <img src="img/thelastofus.jpeg" alt="The Last of Us" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Last of Us</h3>
+                                <p>Séries Pós-Apocalípticas</p>
+                                <div class="card-rating">⭐ 4.9</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">HBO Max</span>
+                        <span class="tech-badge">4K HDR</span>
+                    </div>
+                </div>
+
+                <!-- American Pie -->
+                <div class="category-card" data-category="comedy">
+                    <div class="card-image">
+                        <img src="img/americanpie1.jpeg" alt="American Pie" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>American Pie</h3>
+                                <p>Comédia (1999)</p>
+                                <div class="card-rating">⭐ 4.7</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">HD Remaster</span>
+                        <span class="tech-badge">Multi-áudio</span>
+                    </div>
+                </div>
+
+                <!-- A Forja -->
+                <div class="category-card" data-category="drama">
+                    <div class="card-image">
+                        <img src="img/forja.jpeg" alt="A Forja" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>A Forja</h3>
+                                <p>Drama Inspiracional</p>
+                                <div class="card-rating">⭐ 4.8</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">Cinema 2024</span>
+                        <span class="tech-badge">4K HDR</span>
+                    </div>
+                </div>
+
+                <!-- One Piece -->
+                <div class="category-card" data-category="anime">
+                    <div class="card-image">
+                        <img src="img/onepierce.jpeg" alt="One Piece" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>One Piece</h3>
+                                <p>Anime Épico</p>
+                                <div class="card-rating">⭐ 4.9</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">HD+</span>
+                        <span class="tech-badge">Dublado/Legendado</span>
+                    </div>
+                </div>
+
+                <!-- The Walking Dead: Daryl Dixon -->
+                <div class="category-card" data-category="series">
+                    <div class="card-image">
+                        <img src="img/daryldixon.jpeg" alt="The Walking Dead: Daryl Dixon" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Walking Dead: Daryl Dixon</h3>
+                                <p>Série (2023)</p>
+                                <div class="card-rating">⭐ 4.8</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">AMC+</span>
+                        <span class="tech-badge">4K</span>
+                    </div>
+                </div>
+
+                <!-- The Expendables 4 -->
+                <div class="category-card" data-category="action">
+                    <div class="card-image">
+                        <img src="img/expendables5.jpeg" alt="The Expendables 4" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Expendables 4</h3>
+                                <p>Ação (2023)</p>
+                                <div class="card-rating">⭐ 4.7</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">HD+</span>
+                        <span class="tech-badge">Surround 7.1</span>
+                    </div>
+                </div>
+
+                <!-- The Walking Dead: Dead City -->
+                <div class="category-card" data-category="series">
+                    <div class="card-image">
+                        <img src="img/deadcity.jpeg" alt="The Walking Dead: Dead City" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Walking Dead: Dead City</h3>
+                                <p>Série (2023)</p>
+                                <div class="card-rating">⭐ 4.8</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">AMC</span>
+                        <span class="tech-badge">4K</span>
+                    </div>
+                </div>
+
+                <!-- American Pie 2 -->
+                <div class="category-card" data-category="comedy">
+                    <div class="card-image">
+                        <img src="img/americanpie2.jpeg" alt="American Pie 2" loading="lazy">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>American Pie 2</h3>
+                                <p>Comédia (2001)</p>
+                                <div class="card-rating">⭐ 4.6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-tech-info">
+                        <span class="tech-badge">HD</span>
+                        <span class="tech-badge">Multi-áudio</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+    <!-- AI RECOMMENDATIONS -->
+    <section class="ai-section">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <h2 class="section-title">
+                        <span class="gradient-text">IA Avançada</span> de Recomendações
+                    </h2>
+                    <p class="ai-description">
+                        Nossa inteligência artificial analisa seus gostos, horários de visualização 
+                        e preferências para criar uma experiência personalizada única.
+                    </p>
+                    <div class="ai-features">
+                        <div class="ai-feature">
+                            <div class="ai-icon">🧠</div>
+                            <div>
+                                <h4>Machine Learning</h4>
+                                <p>Algoritmos que aprendem com você</p>
+                            </div>
+                        </div>
+                        <div class="ai-feature">
+                            <div class="ai-icon">🎯</div>
+                            <div>
+                                <h4>Precisão 94%</h4>
+                                <p>Recomendações altamente certeiras</p>
+                            </div>
+                        </div>
+                        <div class="ai-feature">
+                            <div class="ai-icon">⚡</div>
+                            <div>
+                                <h4>Tempo Real</h4>
+                                <p>Sugestões instantâneas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-visual">
+                    <div class="neural-network">
+                        <div class="node" style="--delay: 0s"></div>
+                        <div class="node" style="--delay: 0.5s"></div>
+                        <div class="node" style="--delay: 1s"></div>
+                        <div class="node" style="--delay: 1.5s"></div>
+                        <div class="connection"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O que nossos <span class="gradient-text">clientes dizem</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Incrível! Cancelei Netflix, Disney+ e HBO porque aqui tenho tudo em um só lugar. A qualidade é perfeita e o suporte é muito rápido!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💼</div>
+                        <div class="author-info">
+                            <div class="author-name">Carlos Silva</div>
+                            <div class="author-title">Rio de Janeiro, RJ</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Uso há 8 meses e nunca tive problemas. A família toda assiste e ainda sobra dinheiro no final do mês. Recomendo muito!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍🏫</div>
+                        <div class="author-info">
+                            <div class="author-name">Ana Pereira</div>
+                            <div class="author-title">Minas Gerais, MG</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"A tecnologia por trás é impressionante. Stream em 4K sem travamentos e catálogo sempre atualizado. Melhor investimento que fiz!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💻</div>
+                        <div class="author-info">
+                            <div class="author-name">João Santos</div>
+                            <div class="author-title">São Paulo, SP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANOS MODERNOS -->
+    <section class="plans-section" id="planos">
+        <div class="container">
+            <div class="plans-header">
+                <h2 class="section-title">
+                    Escolha Seu <span class="gradient-text">Plano Ideal</span>
+                </h2>
+                <p class="plans-subtitle">
+                    Tecnologia avançada, qualidade 4K e experiência premium em todos os planos
+                </p>
+                
+                <!-- Toggle Billing Period -->
+                <div class="billing-toggle">
+                    <div class="toggle-container">
+                        <span class="toggle-label">Mensal</span>
+                        <div class="toggle-switch" id="billingToggle">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span class="toggle-label">Anual <span class="save-badge">Economize 40%</span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="plans-grid" id="plansGrid">
+                <!-- PLANO BÁSICO -->
+                <div class="plan-card basic-plan" data-plan="basic">
+                    <div class="plan-header">
+                        <div class="plan-icon">🤖</div>
+                        <h3 class="plan-name">Cyber Basic</h3>
+                        <p class="plan-description">Portal de entrada para o futuro</p>
+                    </div>
+                    
+                    <div class="plan-pricing">
+                        <div class="price-monthly">
+                            <span class="currency">R$</span>
+                            <span class="amount">19,90</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="price-annual" style="display: none;">
+                            <span class="currency">R$</span>
+                            <span class="amount">19,90</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="annual-note" style="display: none;">R$ 238,80 cobrado anualmente</div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>8.000+ canais holográficos</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>Biblioteca digital infinita</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>1 dispositivo sincronizado</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔧</div>
+                            <span>Suporte IA 24/7</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <span>Streaming instantâneo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Link Mensal -->
+                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button monthly-button">
+                        <span class="button-text">Iniciar Jornada</span>
+                        <div class="button-icon">🚀</div>
+                    </a>
+                    
+                    <!-- Link Anual -->
+                    <a href="https://pay.kirvano.com/LINK-ANUAL-BASIC" class="plan-button annual-button" style="display: none;">
+                        <span class="button-text">Iniciar Jornada Anual</span>
+                        <div class="button-icon">💎</div>
+                    </a>
+                    
+                    <div class="plan-footer">
+                        <p>Cancelamento via neural network</p>
+                    </div>
+                </div>
+
+                <!-- PLANO PREMIUM (MAIS POPULAR) -->
+                <div class="plan-card premium-plan popular" data-plan="premium">
+                    <div class="popular-badge">
+                        <span>🔥 MAIS POPULAR</span>
+                    </div>
+                    
+                    <div class="plan-header">
+                        <div class="plan-icon">🚀</div>
+                        <h3 class="plan-name">Neural Pro</h3>
+                        <p class="plan-description">IA avançada para experiências únicas</p>
+                    </div>
+                    
+                    <div class="plan-pricing">
+                        <div class="price-monthly">
+                            <span class="currency">R$</span>
+                            <span class="amount">75,00</span>
+                            <span class="period">/trimestral</span>
+                        </div>
+                        <div class="price-annual" style="display: none;">
+                            <span class="currency">R$</span>
+                            <span class="amount">20,00</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="annual-note" style="display: none;">R$ 290,00 cobrado anualmente</div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>20.000+ canais quânticos</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>Multiverso digital completo</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📱</div>
+                            <span>2 portais sincronizados</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔧</div>
+                            <span>Suporte prioritário IA+</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💎</div>
+                            <span>Matrix Ultra HD 4K+</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Link Mensal -->
+                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button premium-button monthly-button">
+                        <span class="button-text">Evoluir Agora</span>
+                        <div class="button-icon">🚀</div>
+                    </a>
+                    
+                    <!-- Link Anual -->
+                    <a href="https://pay.kirvano.com/LINK-ANUAL-PREMIUM" class="plan-button premium-button annual-button" style="display: none;">
+                        <span class="button-text">Evoluir Anual</span>
+                        <div class="button-icon">💎</div>
+                    </a>
+                    
+                    <div class="plan-footer">
+                        <p>7 dias de acesso neural + Saída livre</p>
+                    </div>
+                </div>
+
+                <!-- PLANO DIAMOND -->
+                <div class="plan-card diamond-plan" data-plan="diamond">
+                    <div class="value-badge">
+                        <span>💎 MELHOR VALOR</span>
+                    </div>
+                    
+                    <div class="plan-header">
+                        <div class="plan-icon">⚛️</div>
+                        <h3 class="plan-name">Quantum Elite</h3>
+                        <p class="plan-description">Realidade aumentada e experiência imersiva</p>
+                    </div>
+                    
+                    <div class="plan-pricing">
+                        <div class="price-monthly">
+                            <span class="currency">R$</span>
+                            <span class="amount">170,00</span>
+                            <span class="period">/semestral</span>
+                        </div>
+                        <div class="price-annual" style="display: none;">
+                            <span class="currency">R$</span>
+                            <span class="amount">50,00</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="annual-note" style="display: none;">R$ 600,00 cobrado anualmente</div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">📱</div>
+                            <span>3 dimensões simultâneas</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>25.000+ universos paralelos</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>Holografia 8K Cristalina</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <span>Arsenal digital completo</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>Suporte Cyborg VIP</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>Portais exclusivos secretos</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Link Mensal -->
+                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button diamond-button monthly-button">
+                        <span class="button-text">Ativar Quantum</span>
+                        <div class="button-icon">💎</div>
+                    </a>
+                    
+                    <!-- Link Anual -->
+                    <a href="https://pay.kirvano.com/LINK-ANUAL-DIAMOND" class="plan-button diamond-button annual-button" style="display: none;">
+                        <span class="button-text">Quantum Anual</span>
+                        <div class="button-icon">🔮</div>
+                    </a>
+                    
+                    <div class="plan-footer">
+                        <p>Realidade aumentada ativada</p>
+                    </div>
+                </div>
+
+                <!-- PLANO PLATINUM -->
+                <div class="plan-card platinum-plan" data-plan="platinum">
+                    <div class="exclusive-badge">
+                        <span>⭐ EXCLUSIVO</span>
+                    </div>
+                    
+                    <div class="plan-header">
+                        <div class="plan-icon">🌌</div>
+                        <h3 class="plan-name">Singularity</h3>
+                        <p class="plan-description">Transcendência digital absoluta</p>
+                    </div>
+                    
+                    <div class="plan-pricing">
+                        <div class="price-monthly">
+                            <span class="currency">R$</span>
+                            <span class="amount">300,00</span>
+                            <span class="period">/Anual</span>
+                        </div>
+                        <div class="price-annual" style="display: none;">
+                            <span class="currency">R$</span>
+                            <span class="amount">79,00</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="annual-note" style="display: none;">R$ 948,00 cobrado anualmente</div>
+                    </div>
+                    
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">�</div>
+                            <span>Infinitas dimensões</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🧠</div>
+                            <span>Consciência coletiva global</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📱</div>
+                            <span>5 realidades paralelas</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💎</div>
+                            <span>Resolução Neural Infinita</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔧</div>
+                            <span>Assistente IA pessoal</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌟</div>
+                            <span>Viagem temporal de conteúdo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Link Mensal -->
+                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button platinum-button monthly-button">
+                        <span class="button-text">Ascender Agora</span>
+                        <div class="button-icon">⭐</div>
+                    </a>
+                    
+                    <!-- Link Anual -->
+                    <a href="https://pay.kirvano.com/LINK-ANUAL-PLATINUM" class="plan-button platinum-button annual-button" style="display: none;">
+                        <span class="button-text">Ascensão Anual</span>
+                        <div class="button-icon">🌟</div>
+                    </a>
+                    
+                    <div class="plan-footer">
+                        <p>Transcendência digital alcançada</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- PASSOS FUTURÍSTICOS -->
+    <section class="steps-section" id="steps">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Como Começar em <span class="gradient-text">4 Steps</span>
+                </h2>
+                <p class="section-subtitle">Processo automatizado e inteligente para sua experiência perfeita</p>
+            </div>
+            
+            <div class="steps-timeline">
+                <div class="step-card" data-step="1">
+                    <div class="step-glow"></div>
+                    <div class="step-number">
+                        <span>01</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step-icon">
+                        <div class="icon-wrapper">
+                            <span class="icon">🚀</span>
+                            <div class="icon-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Escolha & Assine</h3>
+                        <p class="step-description">Escolha seu plano e conecte-se ao futuro do entretenimento.</p>
+                        <div class="step-features">
+                            <span class="feature-tag">Pagamento Seguro</span>
+                            <span class="feature-tag">Criptografia 256-bit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card" data-step="2">
+                    <div class="step-glow"></div>
+                    <div class="step-number">
+                        <span>02</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step-icon">
+                        <div class="icon-wrapper">
+                            <span class="icon">⚡</span>
+                            <div class="icon-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Ativação Instantânea</h3>
+                        <p class="step-description">Sistema automatizado envia credenciais em tempo real</p>
+                        <div class="step-features">
+                            <span class="feature-tag">< 30 segundos</span>
+                            <span class="feature-tag">Email + SMS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card" data-step="3">
+                    <div class="step-glow"></div>
+                    <div class="step-number">
+                        <span>03</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step-icon">
+                        <div class="icon-wrapper">
+                            <span class="icon">📱</span>
+                            <div class="icon-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Setup Inteligente</h3>
+                        <p class="step-description">App detecta dispositivo e configura automaticamente</p>
+                        <div class="step-features">
+                            <span class="feature-tag">Multi-Plataforma</span>
+                            <span class="feature-tag">Auto-Sync</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card" data-step="4">
+                    <div class="step-glow"></div>
+                    <div class="step-number">
+                        <span>04</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step-icon">
+                        <div class="icon-wrapper">
+                            <span class="icon">🎬</span>
+                            <div class="icon-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Experiência Total</h3>
+                        <p class="step-description">IA personaliza conteúdo baseado no seu comportamento</p>
+                        <div class="step-features">
+                            <span class="feature-tag">Recomendações IA</span>
+                            <span class="feature-tag">4K/8K Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="futuristic-btn">
+                    <span class="btn-text">Iniciar Jornada</span>
+                    <div class="btn-effect"></div>
+                    <div class="btn-particles"></div>
+                </a>
+                <div class="guarantee-badge">
+                    <span class="guarantee-icon">🛡️</span>
+                    <span class="guarantee-text">Garantia de 7 dias ou seu dinheiro de volta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPORTE IA AVANÇADO -->
+    <section class="support-section" id="support">
+        <div class="container">
+            <div class="support-grid">
+                <div class="support-main">
+                    <div class="support-header">
+                        <h2 class="support-title">
+                            <span class="gradient-text">Suporte IA</span> 24/7
+                        </h2>
+                        <p class="support-subtitle">
+                            Assistente virtual inteligente + Suporte humano especializado
+                        </p>
+                    </div>
+
+                    <div class="support-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">< 30s</div>
+                            <div class="stat-label">Resposta IA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Uptime</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Disponível</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="support-channels">
+                    <div class="channel-card primary">
+                        <div class="channel-icon">
+                            <span class="icon">🤖</span>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="channel-content">
+                            <h3 class="channel-title">ChatBot IA</h3>
+                            <p class="channel-desc">Respostas instantâneas com inteligência artificial</p>
+                            <div class="channel-status">
+                                <div class="status-dot online"></div>
+                                <span>Online agora</span>
+                            </div>
+                        </div>
+                        <button class="channel-btn ai-btn">
+                            <span>Conversar</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-icon">
+                            <span class="icon">💬</span>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="channel-content">
+                            <h3 class="channel-title">WhatsApp Pro</h3>
+                            <p class="channel-desc">Suporte humano especializado</p>
+                            <div class="channel-status">
+                                <div class="status-dot online"></div>
+                                <span>Resposta em 2 min</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/11982542740" class="channel-btn whatsapp-btn" target="_blank">
+                            <span>Chamar</span>
+                            <div class="btn-glow"></div>
+                        </a>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="channel-icon">
+                            <span class="icon">📧</span>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="channel-content">
+                            <h3 class="channel-title">Email Tech</h3>
+                            <p class="channel-desc">Suporte técnico detalhado</p>
+                            <div class="channel-status">
+                                <div class="status-dot online"></div>
+                                <span>Resposta em 1h</span>
+                            </div>
+                        </div>
+                        <button class="channel-btn email-btn">
+                            <span>Enviar</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-features">
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <span class="feature-text">Suporte Prioritário VIP</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔧</span>
+                    <span class="feature-text">Configuração Remota</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📱</span>
+                    <span class="feature-text">Guias Interativos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER FUTURÍSTICO -->
+    <footer class="futuristic-footer">
+        <div class="footer-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <img src="img/logoprincipal.webp" alt="White Plus" class="logo-img" />
+                        <div class="logo-text">
+                            <span class="brand-name">White Plus</span>
+                            <span class="brand-tagline">Streaming do Futuro</span>
+                        </div>
+                    </div>
+                    <p class="brand-description">
+                        Plataforma de streaming premium com tecnologia de IA avançada, 
+                        oferecendo a melhor experiência audiovisual do mercado.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">IA Powered</span>
+                        <span class="tech-badge">8K Ready</span>
+                        <span class="tech-badge">Cloud First</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title">Plataforma</h4>
+                        <a href="#" class="footer-link">Todos os Planos</a>
+                        <a href="#" class="footer-link">Recursos Premium</a>
+                        <a href="#" class="footer-link">Apps & Dispositivos</a>
+                        <a href="#" class="footer-link">Qualidade 8K</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 class="link-title">Suporte</h4>
+                        <a href="#support" class="footer-link">Central de Ajuda</a>
+                        <a href="https://wa.me/11982542740" class="footer-link">WhatsApp 24/7</a>
+                        <a href="#" class="footer-link">Tutoriais</a>
+                        <a href="#" class="footer-link">Status Sistema</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 class="link-title">Empresa</h4>
+                        <a href="#" class="footer-link">Sobre Nós</a>
+                        <a href="#" class="footer-link">Termos de Uso</a>
+                        <a href="#" class="footer-link">Privacidade</a>
+                        <a href="#" class="footer-link">Imprensa</a>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <h4 class="social-title">Conecte-se</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-tooltip="Instagram">
+                            <span class="social-icon">📸</span>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="YouTube">
+                            <span class="social-icon">📺</span>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="https://wa.me/11982542740" class="social-link" data-tooltip="WhatsApp">
+                            <span class="social-icon">💬</span>
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="Telegram">
+                            <span class="social-icon">✈️</span>
+                            <div class="social-glow"></div>
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <p class="newsletter-text">Updates exclusivos via email</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="seu@email.com" class="newsletter-input">
+                            <button type="submit" class="newsletter-btn">
+                                <span>📡</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <span>&copy; 2025 White Plus. Todos os direitos reservados.</span>
+                    <span class="version">v2.1.0</span>
+                </div>
+                <div class="footer-badges">
+                    <div class="security-badge">
+                        <span class="badge-icon">🔒</span>
+                        <span class="badge-text">SSL Seguro</span>
+                    </div>
+                    <div class="security-badge">
+                        <span class="badge-icon">💳</span>
+                        <span class="badge-text">Pagamento Protegido</span>
+                    </div>
+                    <div class="security-badge">
+                        <span class="badge-icon">🛡️</span>
+                        <span class="badge-text">Dados Criptografados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTION BUTTON -->
+    <div class="fab-container">
+        <button class="fab-main" id="fabMain" aria-label="Menu rápido">
+            <span class="fab-icon">⚡</span>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="fab-item" data-tooltip="Assinar Agora">
+                <span>💳</span>
+            </a>
+            <a href="https://wa.me/11982542740" class="fab-item" data-tooltip="WhatsApp">
+                <span>💬</span>
+            </a>
+            <button class="fab-item" id="shareBtn" data-tooltip="Compartilhar">
+                <span>📤</span>
+            </button>
+            <button class="fab-item" id="installBtn" data-tooltip="Instalar App" style="display: none;">
+                <span>📱</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- EASTER EGG: Konami Code -->
+    <div class="easter-egg" id="easterEgg">
+        <div class="egg-content">
+            <h3>🎉 Código Secreto Ativado!</h3>
+            <p>Você descobriu nosso easter egg! Ganhe 1 mês grátis!</p>
+            <button class="egg-btn">Resgatar Prêmio</button>
+        </div>
+    </div>
+
+    <!-- Modern JavaScript with ES6+ -->
+    <script type="module" src="app.js"></script>
+    
+    <!-- Fallback for older browsers -->
+    <script nomodule>
+        console.log('Este navegador não suporta ES6 modules. Atualize para uma melhor experiência.');
+    </script>
+</body>
+</html>
