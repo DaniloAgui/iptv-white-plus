@@ -34,18 +34,32 @@ body * {
     max-width: 100%;
 }
 
+/* Fix específico para mobile */
+@media (max-width: 768px) {
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 0 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
 /* Ajuste global de contraste - cores mais suaves */
 h1, h2, h3, h4, h5, h6 {
-    color: var(--branco) !important;
+    color: var(--branco);
 }
 
-p, span, div, a {
-    color: var(--cinza) !important;
-}
-
-/* Textos importantes ficam mais visíveis */
+/* Remover !important que pode estar causando problemas */
 .plan-title, .feature-text, .price-amount, .btn-text {
-    color: var(--branco) !important;
+    color: var(--branco);
 }
 
 body {
@@ -4032,7 +4046,7 @@ body.light-theme {
     }
 }
 
-/* Otimização específica para mobile 412x914 */
+/* Mobile responsivo melhorado */
 @media (max-width: 480px) {
     * {
         box-sizing: border-box;
@@ -4055,8 +4069,33 @@ body.light-theme {
     .container {
         padding: 0 16px;
         width: 100%;
-        max-width: 412px;
         margin: 0 auto;
+    }
+    
+    /* Corrigir sobreposições */
+    .hero-section {
+        margin-top: 140px;
+        padding: 2rem 1rem;
+    }
+    
+    .barra-topo {
+        top: 60px;
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+    
+    /* Corrigir cards de planos */
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .plan-card {
+        margin: 0;
+        width: 100%;
+        transform: none !important;
+        scale: none !important;
     }
     
     .header {
@@ -4076,7 +4115,7 @@ body.light-theme {
         justify-content: space-between;
         align-items: center;
         padding: 0 16px;
-        max-width: 412px;
+        width: 100%;
         margin: 0 auto;
     }
     
