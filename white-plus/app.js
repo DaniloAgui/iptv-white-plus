@@ -4,7 +4,6 @@
 class WhitePlusApp {
     constructor() {
         this.isLoaded = false;
-        this.theme = localStorage.getItem('theme') || 'dark';
         this.initializeApp();
         this.setupServiceWorker();
     }
@@ -14,7 +13,6 @@ class WhitePlusApp {
         this.setupLoadingScreen();
         this.setupCustomCursor();
         this.setupScrollEffects();
-        this.setupThemeToggle();
         this.setupCategoryFilters();
         this.setupBillingToggle();
         this.setupIntersectionObservers();
@@ -179,33 +177,7 @@ class WhitePlusApp {
         });
     }
 
-    setupThemeToggle() {
-        const themeToggle = document.getElementById('themeToggle');
-        if (!themeToggle) return;
-        
-        const themeIcon = themeToggle.querySelector('.theme-icon');
-        
-        // Apply saved theme
-        document.body.classList.toggle('light-theme', this.theme === 'light');
-        if (themeIcon) {
-            themeIcon.textContent = this.theme === 'light' ? '☀️' : '🌙';
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            this.theme = this.theme === 'dark' ? 'light' : 'dark';
-            document.body.classList.toggle('light-theme', this.theme === 'light');
-            if (themeIcon) {
-                themeIcon.textContent = this.theme === 'light' ? '☀️' : '🌙';
-            }
-            localStorage.setItem('theme', this.theme);
-            
-            // Add transition effect
-            document.body.style.transition = 'all 0.3s ease';
-            setTimeout(() => {
-                document.body.style.transition = '';
-            }, 300);
-        });
-    }
+
 
     setupCategoryFilters() {
         const filterButtons = document.querySelectorAll('.filter-btn');
