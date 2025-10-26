@@ -11,6 +11,7 @@ class WhitePlusApp {
     async initializeApp() {
         await this.preloadCriticalResources();
         this.setupLoadingScreen();
+        this.detectMobileDevice();
         this.setupCustomCursor();
         this.setupScrollEffects();
         this.setupCategoryFilters();
@@ -25,6 +26,86 @@ class WhitePlusApp {
             document.addEventListener('DOMContentLoaded', () => this.finalizeInit());
         } else {
             this.finalizeInit();
+        }
+    }
+
+    detectMobileDevice() {
+        const isMobile = window.innerWidth <= 768;
+        const isSmallMobile = window.innerWidth <= 370;
+        
+        if (isMobile) {
+            document.body.classList.add('mobile-device');
+        }
+        
+        if (isSmallMobile) {
+            document.body.classList.add('small-mobile-device');
+            // Disable heavy animations on very small devices
+            this.disableHeavyAnimations();
+        }
+        
+        // Listen for orientation changes
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                this.detectMobileDevice();
+                this.optimizeMobileLayout();
+            }, 100);
+        });
+    }
+
+    disableHeavyAnimations() {
+        // Disable heavy animations for better performance on small devices
+        const style = document.createElement('style');
+        style.textContent = `
+            .small-mobile-device * {
+                animation-duration: 0.1s !important;
+                transition-duration: 0.1s !important;
+            }
+            .small-mobile-device .particle,
+            .small-mobile-device .neural-network,
+            .small-mobile-device .cyber-grid {
+                display: none !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    optimizeMobileLayout() {
+        const screenWidth = window.innerWidth;
+        
+        if (screenWidth <= 370) {
+            // Optimize for very small screens
+            this.compactMobileLayout();
+        } else if (screenWidth <= 480) {
+            // Optimize for small mobile
+            this.standardMobileLayout();
+        }
+    }
+
+    compactMobileLayout() {
+        // Hide less critical elements on very small screens
+        const elementsToHide = document.querySelectorAll('.hero-badge, .tech-badges, .ai-visual');
+        elementsToHide.forEach(el => {
+            if (el) el.style.display = 'none';
+        });
+
+        // Simplify navigation
+        const headerNav = document.querySelector('.header-nav');
+        if (headerNav) {
+            headerNav.style.display = 'none';
+        }
+
+        // Reduce grid columns for categories
+        const categoriesGrid = document.querySelector('.categories-grid');
+        if (categoriesGrid) {
+            categoriesGrid.style.gridTemplateColumns = '1fr 1fr';
+        }
+    }
+
+    standardMobileLayout() {
+        // Standard mobile optimizations
+        const categoriesGrid = document.querySelector('.categories-grid');
+        if (categoriesGrid) {
+            categoriesGrid.style.gridTemplateColumns = '1fr 1fr';
         }
     }
 
