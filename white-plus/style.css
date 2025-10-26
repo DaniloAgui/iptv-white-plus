@@ -24,6 +24,16 @@
     padding: 0;
 }
 
+/* Prevenir overflow horizontal global */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body * {
+    max-width: 100%;
+}
+
 body {
     background: var(--fundo);
     color: var(--branco);
@@ -33,6 +43,36 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     cursor: none;
+}
+
+/* Fix para dispositivos móveis */
+@media (hover: none) and (pointer: coarse) {
+    body {
+        cursor: auto;
+        -webkit-overflow-scrolling: touch;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    /* Melhorar performance de scroll em iOS */
+    * {
+        -webkit-overflow-scrolling: touch;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    
+    /* Botões mais tocáveis */
+    button, .btn, a {
+        min-height: 44px;
+        min-width: 44px;
+        touch-action: manipulation;
+    }
+    
+    /* Inputs mais amigáveis no mobile */
+    input, textarea, select {
+        font-size: 16px; /* Evita zoom no iOS */
+        -webkit-appearance: none;
+        appearance: none;
+    }
 }
 
 body.light-theme {
