@@ -2,57 +2,617 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial IPTV White Plus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="description" content="Tutorial Futurístico IPTV White Plus - Configuração Inteligente com IA">
+    <meta name="keywords" content="tutorial, iptv, streaming, configuração, tecnologia, ia">
+    
+    <title>🚀 Tutorial Cyber - White Plus</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="icon" type="image/png" href="../white-plus/img/logo.png">
+    
+    <!-- Advanced Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Advanced Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Critical Inline Styles -->
+    <style>
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        .cyber-loader {
+            width: 80px;
+            height: 80px;
+            border: 3px solid rgba(0, 245, 255, 0.2);
+            border-top: 3px solid #00f5ff;
+            border-radius: 50%;
+            animation: cyberSpin 1s linear infinite;
+        }
+        @keyframes cyberSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <section class="tutorial-container">
-        <header class="tutorial-header">
-            <h1 class="titulo">TUTORIAL</h1>
-            <p class="subtitulo">Guia de aplicativo do serviço alternativo</p>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="cyber-loader"></div>
+    </div>
+
+    <!-- Cursor Personalizado -->
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Background Tecnológico -->
+    <div class="tech-bg">
+        <div class="matrix-rain" id="matrixRain"></div>
+        <div class="grid-overlay"></div>
+        <div class="floating-elements">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="floating-shape shape-5"></div>
+        </div>
+        <div class="neural-network-bg">
+            <div class="neural-node node-1"></div>
+            <div class="neural-node node-2"></div>
+            <div class="neural-node node-3"></div>
+            <div class="neural-node node-4"></div>
+            <div class="neural-connection connection-1"></div>
+            <div class="neural-connection connection-2"></div>
+            <div class="neural-connection connection-3"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation futurística -->
+    <nav class="cyber-nav" id="cyberNav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-satellite-dish nav-icon"></i>
+                <span class="nav-text">WHITE PLUS</span>
+                <div class="nav-glow"></div>
+            </div>
+            <div class="nav-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="nav-status">
+                <div class="status-indicator online"></div>
+                <span class="status-text">SISTEMA ONLINE</span>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="tutorial-container">
+        <!-- Header Futurístico -->
+        <header class="cyber-header">
+            <div class="header-particles">
+                <div class="particle p-1"></div>
+                <div class="particle p-2"></div>
+                <div class="particle p-3"></div>
+                <div class="particle p-4"></div>
+            </div>
+            
+            <div class="header-content">
+                <div class="hologram-logo">
+                    <div class="logo-core">
+                        <i class="fas fa-satellite-dish"></i>
+                        <div class="logo-rings">
+                            <div class="ring ring-1"></div>
+                            <div class="ring ring-2"></div>
+                            <div class="ring ring-3"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="title-section">
+                    <h1 class="cyber-title">
+                        <span class="title-line">CONFIGURAÇÃO</span>
+                        <span class="title-line highlight">NEURAL</span>
+                        <span class="title-line">AVANÇADA</span>
+                    </h1>
+                    <div class="subtitle-container">
+                        <div class="scanner-line"></div>
+                        <p class="cyber-subtitle">
+                            <i class="fas fa-microchip"></i>
+                            Sistema Inteligente de Instalação IPTV
+                            <i class="fas fa-robot"></i>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">100K+</div>
+                        <div class="stat-label">Usuários Ativos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4K/8K</div>
+                        <div class="stat-label">Qualidade</div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <div class="alert-section">
-            <p class="alerta">JÁ DEIXA O APLICATIVO INSTALADO</p>
-        </div>
-
-        <div class="smart-tv-section">
-            <h2 class="tv-title">Se sua TV for Smart TV</h2>
-            <div class="step-card">
-                <p class="passo">1º passo – Abra a loja de aplicativo da sua TV e procure por:</p>
-                <ul class="app-list">
-                    <li>Quick Player</li>
-                    <li>Easy Player</li>
-                    <li>IBO Pro Player</li>
-                </ul>
+        <!-- Alerta Neural -->
+        <section class="neural-alert">
+            <div class="alert-container">
+                <div class="alert-hologram">
+                    <div class="hologram-effect"></div>
+                    <i class="fas fa-exclamation-triangle alert-icon"></i>
+                </div>
+                <div class="alert-content">
+                    <h3 class="alert-title">PROTOCOLO DE SEGURANÇA</h3>
+                    <p class="alert-message">Mantenha o aplicativo sempre instalado para conexão estável</p>
+                    <div class="alert-scanner"></div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="roku-section">
-            <p class="roku-info">
-                <span class="roku-badge">ROKU</span> 
-                pode baixar o Quick Player
-            </p>
-        </div>
-
-        <div class="device-section">
-            <div class="code-card">
-                <p class="codigo">Para os dispositivos abaixo, baixar o DOWNLOADER e digitar esse código:</p>
-                <div class="code-highlight">538797</div>
+        <!-- Seção Smart TV Cyber -->
+        <section class="cyber-section smart-tv">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-tv"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h2 class="section-title">
+                    <span class="title-main">SMART TV</span>
+                    <span class="title-sub">PROTOCOLO ALPHA</span>
+                </h2>
             </div>
-            <ul class="device-list">
-                <li>TV BOX</li>
-                <li>FIRE STICK</li>
-                <li>CHROMECAST</li>
-            </ul>
-        </div>
+            
+            <div class="cyber-card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="step-indicator">
+                        <span class="step-number">01</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <h3 class="step-title">ACESSO À CENTRAL DE APLICATIVOS</h3>
+                    <p class="step-description">Navegue até a loja oficial da sua Smart TV e execute busca pelos seguintes agentes:</p>
+                    
+                    <div class="apps-matrix">
+                        <div class="app-node recommended">
+                            <div class="app-icon">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="app-info">
+                                <span class="app-name">Quick Player</span>
+                                <span class="app-status">RECOMENDADO</span>
+                            </div>
+                            <div class="app-pulse"></div>
+                        </div>
+                        
+                        <div class="app-node">
+                            <div class="app-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="app-info">
+                                <span class="app-name">Easy Player</span>
+                                <span class="app-status">COMPATÍVEL</span>
+                            </div>
+                            <div class="app-pulse"></div>
+                        </div>
+                        
+                        <div class="app-node">
+                            <div class="app-icon">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <div class="app-info">
+                                <span class="app-name">IBO Pro Player</span>
+                                <span class="app-status">PROFISSIONAL</span>
+                            </div>
+                            <div class="app-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="contact-section">
-            <p class="contact-text">Chame neste número que vou mandar o acesso de login:</p>
-            <a href="tel:+5511957584152" class="whatsapp-number">(11) 95758-4152</a>
-        </div>
-    </section>
+        <!-- Seção Roku Especial -->
+        <section class="cyber-section roku-special">
+            <div class="special-device-container">
+                <div class="device-hologram">
+                    <div class="hologram-base"></div>
+                    <div class="device-model">
+                        <i class="fab fa-roku"></i>
+                        <div class="model-glow"></div>
+                    </div>
+                </div>
+                <div class="device-info">
+                    <h3 class="device-title">ROKU STREAMING</h3>
+                    <p class="device-desc">Protocolo especial - Quick Player disponível na store oficial</p>
+                    <div class="compatibility-status">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% COMPATÍVEL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Dispositivos Avançados -->
+        <section class="cyber-section advanced-devices">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-download"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h2 class="section-title">
+                    <span class="title-main">PROTOCOLO BETA</span>
+                    <span class="title-sub">INSTALAÇÃO MANUAL</span>
+                </h2>
+            </div>
+            
+            <div class="cyber-card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="step-indicator">
+                        <span class="step-number">02</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <h3 class="step-title">DOWNLOADER + CÓDIGO NEURAL</h3>
+                    <p class="step-description">Para dispositivos especializados, instale o DOWNLOADER e utilize o código de acesso:</p>
+                    
+                    <div class="code-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn close"></span>
+                                <span class="btn minimize"></span>
+                                <span class="btn maximize"></span>
+                            </div>
+                            <span class="terminal-title">ACESSO_NEURAL.EXE</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="code-line">
+                                <span class="prompt">root@whiteplus:~$</span>
+                                <span class="command">./access_code</span>
+                            </div>
+                            <div class="code-output">
+                                <span class="output-text">Código de acesso gerado:</span>
+                                <div class="access-code">
+                                    <span class="code-digits">5 3 8 7 9 7</span>
+                                    <button class="copy-btn" onclick="copyCode()">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="devices-grid">
+                        <div class="device-card">
+                            <div class="device-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h4 class="device-name">TV BOX</h4>
+                            <div class="device-specs">Android 7.0+</div>
+                            <div class="signal-bars">
+                                <div class="bar active"></div>
+                                <div class="bar active"></div>
+                                <div class="bar active"></div>
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="device-card">
+                            <div class="device-icon">
+                                <i class="fab fa-amazon"></i>
+                            </div>
+                            <h4 class="device-name">FIRE STICK</h4>
+                            <div class="device-specs">Fire OS 6.0+</div>
+                            <div class="signal-bars">
+                                <div class="bar active"></div>
+                                <div class="bar active"></div>
+                                <div class="bar active"></div>
+                                <div class="bar active"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="device-card">
+                            <div class="device-icon">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <h4 class="device-name">CHROMECAST</h4>
+                            <div class="device-specs">Google TV</div>
+                            <div class="signal-bars">
+                                <div class="bar active"></div>
+                                <div class="bar active"></div>
+                                <div class="bar active"></div>
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Credenciais de Acesso -->
+        <section class="cyber-section credentials-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-key"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h2 class="section-title">
+                    <span class="title-main">ATIVAÇÃO NEURAL</span>
+                    <span class="title-sub">CREDENCIAIS DE ACESSO</span>
+                </h2>
+            </div>
+            
+            <div class="cyber-card credentials-card">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="step-indicator">
+                        <span class="step-number">03</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    
+                    <div class="credentials-alert">
+                        <div class="alert-container">
+                            <div class="alert-hologram">
+                                <div class="hologram-effect"></div>
+                                <div class="alert-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                            </div>
+                            <div class="alert-content">
+                                <h3 class="alert-title">PROTOCOLO DE SEGURANÇA ATIVO</h3>
+                                <p class="alert-message">Após instalar o aplicativo, você precisa solicitar suas credenciais de acesso exclusivas via WhatsApp para ativar o serviço.</p>
+                                <div class="alert-scanner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="credentials-steps">
+                        <div class="credential-step">
+                            <div class="step-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="step-info">
+                                <h4>1. INSTALE O APP</h4>
+                                <p>Baixe e instale qualquer um dos aplicativos recomendados</p>
+                            </div>
+                        </div>
+                        
+                        <div class="credential-step">
+                            <div class="step-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="step-info">
+                                <h4>2. SOLICITE ACESSO</h4>
+                                <p>Entre em contato via WhatsApp para receber seu usuário e senha</p>
+                            </div>
+                        </div>
+                        
+                        <div class="credential-step">
+                            <div class="step-icon">
+                                <i class="fas fa-unlock-alt"></i>
+                            </div>
+                            <div class="step-info">
+                                <h4>3. ATIVE O SERVIÇO</h4>
+                                <p>Insira as credenciais no app e aproveite todo o conteúdo</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="whatsapp-activation">
+                        <div class="activation-card">
+                            <div class="card-icon">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="card-content-inner">
+                                <h4>SOLICITAR CREDENCIAIS</h4>
+                                <p>Clique para entrar em contato e receber seu acesso</p>
+                                <a href="https://wa.me/5511999999999?text=Olá! Acabei de instalar o aplicativo IPTV e gostaria de receber minhas credenciais de acesso (usuário e senha). Obrigado!" class="whatsapp-btn">
+                                    <span class="btn-glow"></span>
+                                    <i class="fab fa-whatsapp"></i>
+                                    SOLICITAR ACESSO
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Central de Suporte -->
+        <section class="cyber-section support-center">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-headset"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <h2 class="section-title">
+                    <span class="title-main">CENTRAL NEURAL</span>
+                    <span class="title-sub">SUPORTE AVANÇADO</span>
+                </h2>
+            </div>
+            
+            <div class="support-hub">
+                <div class="ai-assistant">
+                    <div class="ai-avatar">
+                        <div class="avatar-core">🤖</div>
+                        <div class="avatar-rings">
+                            <div class="ring"></div>
+                            <div class="ring"></div>
+                        </div>
+                    </div>
+                    <div class="ai-status">
+                        <div class="status-dot online"></div>
+                        <span>IA ONLINE</span>
+                    </div>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-card primary">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h4>WhatsApp Neural</h4>
+                            <p>Credenciais de acesso em tempo real</p>
+                        </div>
+                        <a href="https://wa.me/5511957584152" class="neural-btn" target="_blank">
+                            <span>CONECTAR</span>
+                            <div class="btn-glow"></div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="system-status">
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <div class="status-label">SERVIDORES</div>
+                            <div class="status-value online">ONLINE</div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-label">LATÊNCIA</div>
+                            <div class="status-value">< 50ms</div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-label">UPTIME</div>
+                            <div class="status-value">99.9%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts Avançados -->
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('pageLoader').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Custom Cursor
+        const cursor = document.getElementById('customCursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Matrix Rain Effect
+        function createMatrixRain() {
+            const matrix = document.getElementById('matrixRain');
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            for (let i = 0; i < 50; i++) {
+                const span = document.createElement('span');
+                span.textContent = chars[Math.floor(Math.random() * chars.length)];
+                span.style.left = Math.random() * 100 + '%';
+                span.style.animationDelay = Math.random() * 3 + 's';
+                span.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                matrix.appendChild(span);
+            }
+        }
+        createMatrixRain();
+
+        // Copy Code Function
+        function copyCode() {
+            navigator.clipboard.writeText('538797').then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i>';
+                btn.style.background = 'linear-gradient(135deg, #00ff00, #008000)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+
+        // Scroll Progress
+        function updateScrollProgress() {
+            const scrollProgress = document.getElementById('progressBar');
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        }
+        window.addEventListener('scroll', updateScrollProgress);
+
+        // Interactive Elements
+        document.querySelectorAll('.cyber-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Terminal Animation
+        function typeWriterEffect() {
+            const commandElement = document.querySelector('.command');
+            const text = './access_code';
+            let i = 0;
+            
+            commandElement.textContent = '';
+            const interval = setInterval(() => {
+                commandElement.textContent += text[i];
+                i++;
+                if (i >= text.length) {
+                    clearInterval(interval);
+                }
+            }, 100);
+        }
+        
+        setTimeout(typeWriterEffect, 2000);
+
+        // Device Cards Animation
+        document.querySelectorAll('.device-card').forEach((card, index) => {
+            card.style.animationDelay = (index * 0.2) + 's';
+        });
+
+        // Neural Pulse Effect
+        setInterval(() => {
+            document.querySelectorAll('.app-pulse').forEach(pulse => {
+                pulse.style.animation = 'none';
+                setTimeout(() => {
+                    pulse.style.animation = 'neuralPulse 2s ease-in-out infinite';
+                }, 10);
+            });
+        }, 3000);
+    </script>
+
+    <!-- ===== SISTEMA CYBER AVANÇADO ===== -->
+    <script src="cyber-effects.js"></script>
 </body>
 </html>
