@@ -1,21 +1,21 @@
 :root {
-    --branco: #fff;
-    --cinza: #e5e7eb;
-    --cinza-escuro: #22223b;
-    --cinza-medio: #6b7280;
-    --azul: #167BF7;
-    --roxo: #7c3aed;
-    --vermelho: #EC2F46;
-    --verde: #10b981;
-    --laranja: #f59e42;
-    --fundo: #0a0a0f;
-    --fundo-card: #1a1a2e;
-    --fundo-hero: #16213e;
+    --branco: #e8e8e8;
+    --cinza: #b0b0b0;
+    --cinza-escuro: #2a2a3a;
+    --cinza-medio: #7a7a8a;
+    --azul: #4a90ff;
+    --roxo: #8b5cf6;
+    --vermelho: #ff4757;
+    --verde: #2ed573;
+    --laranja: #ffa502;
+    --fundo: #0f0f14;
+    --fundo-card: #1c1c28;
+    --fundo-hero: #1a1a26;
     --fonte: 'Inter', Arial, Helvetica, sans-serif;
-    --sombra: 0 4px 24px rgba(44, 62, 80, 0.13);
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    --sombra: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --gradient-primary: linear-gradient(135deg, #4a90ff 0%, #8b5cf6 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+    --gradient-hero: linear-gradient(135deg, #4a90ff 0%, #8b5cf6 50%, #ff6b9d 100%);
 }
 
 * {
@@ -32,6 +32,20 @@ html, body {
 
 body * {
     max-width: 100%;
+}
+
+/* Ajuste global de contraste - cores mais suaves */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--branco) !important;
+}
+
+p, span, div, a {
+    color: var(--cinza) !important;
+}
+
+/* Textos importantes ficam mais visíveis */
+.plan-title, .feature-text, .price-amount, .btn-text {
+    color: var(--branco) !important;
 }
 
 body {
@@ -76,11 +90,11 @@ body {
 }
 
 body.light-theme {
-    --fundo: #f8fafc;
-    --fundo-card: #ffffff;
-    --branco: #1a202c;
-    --cinza: #4a5568;
-    --cinza-escuro: #2d3748;
+    --fundo: #1a1a20;
+    --fundo-card: #242430;
+    --branco: #d0d0d0;
+    --cinza: #9a9aa0;
+    --cinza-escuro: #3a3a40;
 }
 
 /* LOADING SCREEN */
@@ -128,7 +142,7 @@ body.light-theme {
 .loading-progress {
     width: 200px;
     height: 4px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(200, 200, 200, 0.05);
     border-radius: 2px;
     overflow: hidden;
     margin: 0 auto;
@@ -204,7 +218,7 @@ body.light-theme {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(200, 200, 200, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--branco);
@@ -329,7 +343,7 @@ body.light-theme {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(200, 200, 200, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 12px 24px;
@@ -382,7 +396,7 @@ body.light-theme {
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(200, 200, 200, 0.05);
 }
 
 .platform-item:hover {
@@ -429,7 +443,7 @@ body.light-theme {
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(200, 200, 200, 0.05);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
@@ -518,7 +532,7 @@ body.light-theme {
 .feature-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
@@ -585,7 +599,7 @@ body.light-theme {
     background: var(--fundo-card);
     border-radius: 20px;
     padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     transition: all 0.3s ease;
     position: relative;
 }
@@ -671,7 +685,7 @@ body.light-theme {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     position: relative;
     transition: all 0.3s ease;
 }
@@ -726,7 +740,7 @@ body.light-theme {
 
 .comparison-item {
     padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.05);
     color: var(--cinza);
 }
 
@@ -819,7 +833,7 @@ body.light-theme {
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
 }
 
 .filter-btn:hover,
@@ -856,7 +870,7 @@ body.light-theme {
     background: var(--fundo-card);
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-style: preserve-3d;
     position: relative;
@@ -965,7 +979,7 @@ body.light-theme {
 .stat-box {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
@@ -1034,7 +1048,7 @@ body.light-theme {
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     transition: all 0.3s ease;
 }
 
@@ -1144,7 +1158,7 @@ body.light-theme {
 .botao-assinar {
     display: inline-block;
     background: linear-gradient(90deg, var(--roxo), var(--azul));
-    color: #fff;
+    color: #e8e8e8;
     padding: 14px 38px;
     border-radius: 12px;
     text-decoration: none;
@@ -1196,7 +1210,7 @@ body.light-theme {
 
 .representacao-botao {
     background: var(--azul);
-    color: #fff;
+    color: #e8e8e8;
 }
 .representacao-botao:hover {
     background: var(--roxo);
@@ -1305,7 +1319,7 @@ body.light-theme {
     padding: 1rem 2rem;
     border-radius: 50px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
 }
 
 .toggle-label {
@@ -1398,7 +1412,7 @@ body.light-theme {
     border-radius: 16px;
     padding: 1.8rem 1.4rem 1.4rem;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform-style: preserve-3d;
     overflow: hidden;
@@ -1924,7 +1938,7 @@ body.light-theme {
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #fff;
+    background: #2a2a3a;
     border-radius: 50%;
     animation: sparkle 2s ease-in-out infinite;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
@@ -1972,7 +1986,7 @@ body.light-theme {
     position: absolute;
     width: 6px;
     height: 6px;
-    background: #fff;
+    background: #2a2a3a;
     border-radius: 50%;
     animation: diamondSparkle 2s ease-in-out infinite;
 }
@@ -2073,7 +2087,7 @@ body.light-theme {
     position: absolute;
     width: 4px;
     height: 4px;
-    background: #fff;
+    background: #2a2a3a;
     border-radius: 50%;
     animation: starTwinkle 3s ease-in-out infinite;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
@@ -2232,7 +2246,7 @@ body.light-theme {
     background: rgba(255, 255, 255, 0.02);
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     backdrop-filter: blur(10px);
 }
 
@@ -2288,7 +2302,7 @@ body.light-theme {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
 }
 
 .trust-item {
@@ -2357,7 +2371,7 @@ body.light-theme {
     width: 38px;
     height: 38px;
     border-radius: 8px;
-    background: #fff;
+    background: #2a2a3a;
     padding: 3px;
 }
 
@@ -2409,7 +2423,7 @@ body.light-theme {
     z-index: 1000;
     background: rgba(10, 10, 15, 0.95);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.05);
     padding: 0;
     transition: all 0.3s ease;
 }
@@ -2437,7 +2451,7 @@ body.light-theme {
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    background: #fff;
+    background: #2a2a3a;
     padding: 2px;
 }
 
@@ -2476,7 +2490,7 @@ body.light-theme {
 
 .titulo-passos {
   font-size: 2rem;
-  color: #fff;
+  color: #e8e8e8;
   margin-bottom: 32px;
   font-weight: 700;
 }
@@ -2502,7 +2516,7 @@ body.light-theme {
 
 .passo-numero {
   background: linear-gradient(90deg, #7c3aed, #167BF7);
-  color: #fff;
+  color: #e8e8e8;
   font-size: 1.6rem;
   font-weight: bold;
   width: 44px;
@@ -2529,7 +2543,7 @@ body.light-theme {
 
 .button-comecar {
   background: linear-gradient(90deg, #7c3aed, #167BF7);
-  color: #fff;
+  color: #e8e8e8;
   border: none;
   border-radius: 8px;
   padding: 14px 38px;
@@ -2546,7 +2560,7 @@ body.light-theme {
 
 .suporte-247 {
   background: linear-gradient(90deg, #7c3aed 0%, #167BF7 100%);
-  color: #fff;
+  color: #e8e8e8;
   padding: 48px 0 36px 0;
   text-align: center;
 }
@@ -2603,7 +2617,7 @@ body.light-theme {
 .suporte-botao {
   display: inline-block;
   background: #25d365b4;
-  color: #fff;
+  color: #e8e8e8;
   font-weight: 600;
   padding: 10px 28px;
   border-radius: 8px;
@@ -2651,7 +2665,7 @@ body.light-theme {
 
 .step-card {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     border-radius: 20px;
     padding: 2.5rem;
     position: relative;
@@ -2755,7 +2769,7 @@ body.light-theme {
 .step-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #e8e8e8;
     margin-bottom: 1rem;
 }
 
@@ -2884,7 +2898,7 @@ body.light-theme {
 
 .channel-card {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     border-radius: 15px;
     padding: 1.5rem;
     display: grid;
@@ -2936,7 +2950,7 @@ body.light-theme {
 
 .channel-title {
     font-weight: 700;
-    color: #ffffff;
+    color: #e8e8e8;
     margin-bottom: 0.3rem;
 }
 
@@ -3100,7 +3114,7 @@ body.light-theme {
 .brand-name {
     font-size: 1.5rem;
     font-weight: 900;
-    color: #ffffff;
+    color: #e8e8e8;
     display: block;
 }
 
@@ -3139,7 +3153,7 @@ body.light-theme {
 }
 
 .link-title {
-    color: #ffffff;
+    color: #e8e8e8;
     font-weight: 700;
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -3178,7 +3192,7 @@ body.light-theme {
 }
 
 .social-title {
-    color: #ffffff;
+    color: #e8e8e8;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -3193,7 +3207,7 @@ body.light-theme {
     width: 45px;
     height: 45px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -3245,9 +3259,9 @@ body.light-theme {
     flex: 1;
     padding: 0.8rem 1rem;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
     border-radius: 25px;
-    color: #ffffff;
+    color: #e8e8e8;
     font-size: 0.9rem;
 }
 
@@ -3274,7 +3288,7 @@ body.light-theme {
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(200, 200, 200, 0.05);
 }
 
 .copyright {
@@ -3449,7 +3463,7 @@ body.light-theme {
     .futuristic-footer {
         padding: 48px 0 32px 0;
         background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(200, 200, 200, 0.05);
         position: relative;
         overflow: hidden;
     }
@@ -3476,7 +3490,7 @@ body.light-theme {
     
     body .futuristic-footer .footer-brand {
         padding-bottom: 10px !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-bottom: 1px solid rgba(200, 200, 200, 0.05) !important;
         margin-bottom: 12px !important;
     }
     
@@ -3574,14 +3588,14 @@ body.light-theme {
     .footer-social {
         margin-top: 16px;
         padding-top: 24px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(200, 200, 200, 0.05);
     }
     
     .social-title {
         font-size: 16px;
         font-weight: 700;
         margin-bottom: 16px;
-        color: #fff;
+        color: #e8e8e8;
     }
     
     .social-links {
@@ -3597,7 +3611,7 @@ body.light-theme {
         justify-content: center;
         width: 48px;
         height: 48px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(200, 200, 200, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 50%;
         color: rgba(255, 255, 255, 0.8);
@@ -3608,7 +3622,7 @@ body.light-theme {
     
     .social-link:hover {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        color: #e8e8e8;
         transform: translateY(-2px);
         border-color: transparent;
         box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
@@ -3639,10 +3653,10 @@ body.light-theme {
         flex: 1;
         padding: 12px 16px;
         font-size: 14px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(200, 200, 200, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 25px;
-        color: #fff;
+        color: #e8e8e8;
         backdrop-filter: blur(10px);
     }
     
@@ -3655,7 +3669,7 @@ body.light-theme {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border: none;
         border-radius: 25px;
-        color: #fff;
+        color: #e8e8e8;
         cursor: pointer;
         transition: all 0.3s ease;
         font-size: 16px;
@@ -3672,7 +3686,7 @@ body.light-theme {
         gap: 20px;
         margin-top: 32px;
         padding-top: 24px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(200, 200, 200, 0.05);
         text-align: center;
         max-width: 380px;
         margin-left: auto;
@@ -3711,7 +3725,7 @@ body.light-theme {
         font-weight: 500;
         padding: 8px 12px;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
         border-radius: 20px;
         color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(10px);
@@ -3737,7 +3751,7 @@ body.light-theme {
         height: 56px;
         font-size: 20px;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        color: #e8e8e8;
         border: none;
         border-radius: 50%;
         cursor: pointer;
@@ -3754,8 +3768,8 @@ body.light-theme {
         width: 48px;
         height: 48px;
         font-size: 18px;
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
+        background: rgba(200, 200, 200, 0.05);
+        color: #e8e8e8;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 50%;
         backdrop-filter: blur(10px);
@@ -3771,7 +3785,7 @@ body.light-theme {
     body .futuristic-footer {
         padding: 20px 12px 16px 12px !important;
         background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%) !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-top: 1px solid rgba(200, 200, 200, 0.05) !important;
         width: 100% !important;
         max-width: 412px !important;
         margin: 0 auto !important;
@@ -3802,7 +3816,7 @@ body.light-theme {
     
     .footer-brand {
         padding-bottom: 20px !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-bottom: 1px solid rgba(200, 200, 200, 0.05) !important;
         width: 100% !important;
     }
     
@@ -3875,7 +3889,7 @@ body.light-theme {
     .footer-social {
         margin-top: 12px !important;
         padding-top: 20px !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-top: 1px solid rgba(200, 200, 200, 0.05) !important;
         width: 100% !important;
     }
     
@@ -3899,7 +3913,7 @@ body.light-theme {
         justify-content: center !important;
         width: 40px !important;
         height: 40px !important;
-        background: rgba(255, 255, 255, 0.1) !important;
+        background: rgba(200, 200, 200, 0.05) !important;
         border: 1px solid rgba(255, 255, 255, 0.2) !important;
         border-radius: 50% !important;
         color: rgba(255, 255, 255, 0.8) !important;
@@ -3931,7 +3945,7 @@ body.light-theme {
         flex: 1 !important;
         padding: 10px 14px !important;
         font-size: 12px !important;
-        background: rgba(255, 255, 255, 0.1) !important;
+        background: rgba(200, 200, 200, 0.05) !important;
         border: 1px solid rgba(255, 255, 255, 0.2) !important;
         border-radius: 20px !important;
         color: #fff !important;
@@ -3952,7 +3966,7 @@ body.light-theme {
         gap: 16px !important;
         margin-top: 24px !important;
         padding-top: 20px !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-top: 1px solid rgba(200, 200, 200, 0.05) !important;
         text-align: center !important;
         width: 100% !important;
         max-width: 340px !important;
@@ -3977,7 +3991,7 @@ body.light-theme {
         font-size: 10px !important;
         padding: 6px 10px !important;
         background: rgba(255, 255, 255, 0.05) !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(200, 200, 200, 0.05) !important;
         border-radius: 15px !important;
         color: rgba(255, 255, 255, 0.7) !important;
         display: flex !important;
@@ -4054,7 +4068,7 @@ body.light-theme {
         padding: 12px 0;
         backdrop-filter: blur(20px);
         background: rgba(10, 10, 15, 0.95);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(200, 200, 200, 0.05);
     }
     
     .header-container {
@@ -4081,7 +4095,7 @@ body.light-theme {
     .header-logo span {
         font-size: 18px;
         font-weight: 700;
-        color: #fff;
+        color: #e8e8e8;
     }
     
     .header-nav {
@@ -4101,8 +4115,8 @@ body.light-theme {
     
     .header-nav a:hover,
     .header-nav a:active {
-        color: #fff;
-        background: rgba(255, 255, 255, 0.1);
+        color: #e8e8e8;
+        background: rgba(200, 200, 200, 0.05);
     }
     
     .barra-topo {
@@ -4116,7 +4130,7 @@ body.light-theme {
         padding: 12px 16px;
         text-align: center;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        color: #e8e8e8;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     
@@ -4165,7 +4179,7 @@ body.light-theme {
         margin: 0;
         border-radius: 12px;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
         text-align: center;
     }
     
@@ -4201,7 +4215,7 @@ body.light-theme {
         font-size: 0.7rem;
         padding: 0.3rem 0.8rem;
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(200, 200, 200, 0.05);
     }
     
     .support-grid {
@@ -4240,7 +4254,7 @@ body.light-theme {
         padding: 1.5rem;
         border-radius: 12px;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
     }
     
     .channel-title {
@@ -4309,7 +4323,7 @@ body.light-theme {
         align-items: center;
         gap: 12px;
         padding: 4px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(200, 200, 200, 0.05);
         border-radius: 30px;
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
@@ -4325,7 +4339,7 @@ body.light-theme {
         font-size: 12px;
         padding: 4px 8px;
         background: #667eea;
-        color: #fff;
+        color: #e8e8e8;
         border-radius: 12px;
         margin-left: 8px;
     }
@@ -4344,7 +4358,7 @@ body.light-theme {
         position: relative;
         padding: 32px 24px;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
         border-radius: 20px;
         backdrop-filter: blur(20px);
         transition: all 0.3s ease;
@@ -4365,7 +4379,7 @@ body.light-theme {
         transform: translateX(-50%);
         padding: 8px 16px;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        color: #e8e8e8;
         font-size: 12px;
         font-weight: 700;
         border-radius: 20px;
@@ -4387,7 +4401,7 @@ body.light-theme {
         font-size: 24px;
         font-weight: 800;
         margin: 8px 0;
-        color: #fff;
+        color: #e8e8e8;
     }
     
     .plan-description {
@@ -4413,7 +4427,7 @@ body.light-theme {
     .amount {
         font-size: 40px;
         font-weight: 900;
-        color: #fff;
+        color: #e8e8e8;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
     
@@ -4478,7 +4492,7 @@ body.light-theme {
     
     .premium-button {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        color: #e8e8e8;
         box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
     }
     
@@ -4501,10 +4515,10 @@ body.light-theme {
         font-size: 14px;
         font-weight: 600;
         margin-bottom: 24px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(200, 200, 200, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 25px;
-        color: #fff;
+        color: #e8e8e8;
         backdrop-filter: blur(10px);
     }
     
@@ -4517,7 +4531,7 @@ body.light-theme {
         font-weight: 800;
         line-height: 1.2;
         margin-bottom: 20px;
-        color: #fff;
+        color: #e8e8e8;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
     
@@ -4602,7 +4616,7 @@ body.light-theme {
     
     .btn-primary {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        color: #e8e8e8;
         box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
     }
     
@@ -4612,8 +4626,8 @@ body.light-theme {
     }
     
     .btn-secondary {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
+        background: rgba(200, 200, 200, 0.05);
+        color: #e8e8e8;
         border: 1px solid rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(10px);
     }
@@ -4635,7 +4649,7 @@ body.light-theme {
         padding: 24px 16px;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
         backdrop-filter: blur(10px);
     }
     
@@ -4647,7 +4661,7 @@ body.light-theme {
     .stat-item .stat-number {
         font-size: 24px;
         font-weight: 800;
-        color: #fff;
+        color: #e8e8e8;
         margin-bottom: 4px;
         display: block;
     }
@@ -4677,7 +4691,7 @@ body.light-theme {
         line-height: 1.2;
         margin-bottom: 16px;
         text-align: center;
-        color: #fff;
+        color: #e8e8e8;
     }
     
     .section-subtitle {
@@ -4716,7 +4730,7 @@ body.light-theme {
         white-space: nowrap;
         border-radius: 25px;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(200, 200, 200, 0.05);
         color: rgba(255, 255, 255, 0.8);
         cursor: pointer;
         transition: all 0.3s ease;
@@ -4726,7 +4740,7 @@ body.light-theme {
     .filter-btn.active,
     .filter-btn:hover {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
+        color: #e8e8e8;
         border-color: transparent;
         transform: translateY(-1px);
     }
@@ -4745,7 +4759,7 @@ body.light-theme {
         border-radius: 16px;
         overflow: hidden;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
         backdrop-filter: blur(10px);
         transition: all 0.3s ease;
     }
@@ -4785,7 +4799,7 @@ body.light-theme {
         font-size: 18px;
         font-weight: 700;
         margin-bottom: 4px;
-        color: #fff;
+        color: #e8e8e8;
     }
     
     .card-info p {
@@ -4847,7 +4861,7 @@ body.light-theme {
         text-align: center;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
         backdrop-filter: blur(20px);
         transition: all 0.3s ease;
     }
@@ -4868,7 +4882,7 @@ body.light-theme {
     .stat-number {
         font-size: 24px;
         font-weight: 800;
-        color: #fff;
+        color: #e8e8e8;
         margin-bottom: 4px;
         display: block;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -4898,7 +4912,7 @@ body.light-theme {
         text-align: center;
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(200, 200, 200, 0.05);
         backdrop-filter: blur(20px);
         transition: all 0.3s ease;
     }
@@ -4919,7 +4933,7 @@ body.light-theme {
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 12px;
-        color: #fff;
+        color: #e8e8e8;
     }
     
     .feature-card p {
@@ -4989,7 +5003,7 @@ body.light-theme {
     padding: 2rem 1.5rem;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 200, 200, 0.05);
   }
   
   .testimonial-rating {
@@ -5289,7 +5303,7 @@ body.light-theme {
     width: 100%;
     height: auto;
     border-radius: 18px;
-    background: #fff;
+    background: #2a2a3a;
     padding: 12px;
     box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
 }
