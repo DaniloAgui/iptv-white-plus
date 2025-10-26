@@ -17,7 +17,7 @@
     <!-- Preload Critical Resources -->
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="app.js" as="script">
-    <link rel="preload" href="img/strim.jpg" as="image">
+    <link rel="preload" href="img/logo.png" as="image">
     
     <!-- Fonts with display=swap for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +25,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logoprincipal.webp">
-    <link rel="apple-touch-icon" href="img/logoprincipal.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="apple-touch-icon" href="img/logo.png">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
@@ -86,7 +86,7 @@
     <header class="header">
         <div class="header-container">
             <div class="header-logo">
-                <img src="img/logoprincipal.webp" alt="White Plus" />
+                <img src="img/logo.png" alt="White Plus" />
                 <span>White Plus</span>
             </div>
             <nav class="header-nav">
@@ -143,7 +143,7 @@
             </div>
 
             <div class="hero-buttons">
-                <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="btn-primary">
+                <a href="https://pay.kirvano.com/c3625ae9-b0e4-446e-ab75-f54b6db5e556" class="btn-primary">
                     <span class="btn-icon">🚀</span>
                     Começar Agora
                 </a>
@@ -497,6 +497,19 @@
             <div class="plans-grid" id="plansGrid">
                 <!-- PLANO BÁSICO -->
                 <div class="plan-card basic-plan" data-plan="basic">
+                    <!-- Destaque Especial - 1 Conexão -->
+                    <div class="plan-highlight basic-highlight">
+                        <div class="highlight-badge">
+                            <span class="highlight-icon">🎯</span>
+                            <span class="highlight-text">1 CONEXÃO</span>
+                        </div>
+                        <div class="highlight-animation">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring pulse-delay-1"></div>
+                            <div class="pulse-ring pulse-delay-2"></div>
+                        </div>
+                    </div>
+                    
                     <div class="plan-header">
                         <div class="plan-icon">🤖</div>
                         <h3 class="plan-name">Cyber Basic</h3>
@@ -541,13 +554,13 @@
                     </div>
                     
                     <!-- Link Mensal -->
-                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button monthly-button">
+                    <a href="https://pay.kirvano.com/c3625ae9-b0e4-446e-ab75-f54b6db5e556" class="plan-button monthly-button">
                         <span class="button-text">Iniciar Jornada</span>
                         <div class="button-icon">🚀</div>
                     </a>
                     
                     <!-- Link Anual -->
-                    <a href="https://pay.kirvano.com/LINK-ANUAL-BASIC" class="plan-button annual-button" style="display: none;">
+                    <a href="https://pay.kirvano.com/5b0f9344-815a-4d76-9c37-a8b4dd064162" class="plan-button annual-button" style="display: none;">
                         <span class="button-text">Iniciar Jornada Anual</span>
                         <div class="button-icon">💎</div>
                     </a>
@@ -561,6 +574,19 @@
                 <div class="plan-card premium-plan popular" data-plan="premium">
                     <div class="popular-badge">
                         <span>🔥 MAIS POPULAR</span>
+                    </div>
+                    
+                    <!-- Destaque Especial - 2 Conexões -->
+                    <div class="plan-highlight premium-highlight">
+                        <div class="highlight-badge">
+                            <span class="highlight-icon">⚡</span>
+                            <span class="highlight-text">2 CONEXÕES</span>
+                        </div>
+                        <div class="highlight-animation">
+                            <div class="electric-bolt"></div>
+                            <div class="electric-bolt bolt-delay-1"></div>
+                            <div class="electric-spark"></div>
+                        </div>
                     </div>
                     
                     <div class="plan-header">
@@ -607,13 +633,13 @@
                     </div>
                     
                     <!-- Link Mensal -->
-                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button premium-button monthly-button">
+                    <a href="https://pay.kirvano.com/66c82b0a-aa2a-4677-ba6f-32f47cef81a9" class="plan-button premium-button monthly-button">
                         <span class="button-text">Evoluir Agora</span>
                         <div class="button-icon">🚀</div>
                     </a>
                     
                     <!-- Link Anual -->
-                    <a href="https://pay.kirvano.com/LINK-ANUAL-PREMIUM" class="plan-button premium-button annual-button" style="display: none;">
+                    <a href="https://pay.kirvano.com/91f533eb-c26b-49ff-856a-0f49d8930195" class="plan-button premium-button annual-button" style="display: none;">
                         <span class="button-text">Evoluir Anual</span>
                         <div class="button-icon">💎</div>
                     </a>
@@ -627,6 +653,21 @@
                 <div class="plan-card diamond-plan" data-plan="diamond">
                     <div class="value-badge">
                         <span>💎 MELHOR VALOR</span>
+                    </div>
+                    
+                    <!-- Destaque Especial - 3 Conexões -->
+                    <div class="plan-highlight diamond-highlight">
+                        <div class="highlight-badge">
+                            <span class="highlight-icon">💎</span>
+                            <span class="highlight-text">3 CONEXÕES</span>
+                        </div>
+                        <div class="highlight-animation">
+                            <div class="diamond-glow"></div>
+                            <div class="diamond-sparkle sparkle-1"></div>
+                            <div class="diamond-sparkle sparkle-2"></div>
+                            <div class="diamond-sparkle sparkle-3"></div>
+                            <div class="diamond-sparkle sparkle-4"></div>
+                        </div>
                     </div>
                     
                     <div class="plan-header">
@@ -677,13 +718,13 @@
                     </div>
                     
                     <!-- Link Mensal -->
-                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button diamond-button monthly-button">
+                    <a href="https://pay.kirvano.com/00940fa3-c23f-4791-99d1-15c297c8987e" class="plan-button diamond-button monthly-button">
                         <span class="button-text">Ativar Quantum</span>
                         <div class="button-icon">💎</div>
                     </a>
                     
                     <!-- Link Anual -->
-                    <a href="https://pay.kirvano.com/LINK-ANUAL-DIAMOND" class="plan-button diamond-button annual-button" style="display: none;">
+                    <a href="https://pay.kirvano.com/1d9c0460-efc9-41f0-b1ff-c2fc16985a6e" class="plan-button diamond-button annual-button" style="display: none;">
                         <span class="button-text">Quantum Anual</span>
                         <div class="button-icon">🔮</div>
                     </a>
@@ -697,6 +738,27 @@
                 <div class="plan-card platinum-plan" data-plan="platinum">
                     <div class="exclusive-badge">
                         <span>⭐ EXCLUSIVO</span>
+                    </div>
+                    
+                    <!-- Destaque Especial - 5 Conexões -->
+                    <div class="plan-highlight platinum-highlight">
+                        <div class="highlight-badge">
+                            <span class="highlight-icon">🌟</span>
+                            <span class="highlight-text">5 CONEXÕES</span>
+                        </div>
+                        <div class="highlight-animation">
+                            <div class="cosmic-ring"></div>
+                            <div class="cosmic-ring ring-delay-1"></div>
+                            <div class="cosmic-ring ring-delay-2"></div>
+                            <div class="nebula-glow"></div>
+                            <div class="star-field">
+                                <div class="star star-1"></div>
+                                <div class="star star-2"></div>
+                                <div class="star star-3"></div>
+                                <div class="star star-4"></div>
+                                <div class="star star-5"></div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="plan-header">
@@ -747,7 +809,7 @@
                     </div>
                     
                     <!-- Link Mensal -->
-                    <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="plan-button platinum-button monthly-button">
+                    <a href="https://pay.kirvano.com/720c9121-cfc2-42ea-966c-22f808fca9a0" class="plan-button platinum-button monthly-button">
                         <span class="button-text">Ascender Agora</span>
                         <div class="button-icon">⭐</div>
                     </a>
@@ -814,7 +876,7 @@
                     </div>
                     <div class="step-content">
                         <h3 class="step-title">Ativação Instantânea</h3>
-                        <p class="step-description">Sistema automatizado envia credenciais em tempo real</p>
+                        <p class="step-description">Login e senha serão enviados por email em até 5 minutos.</p>
                         <div class="step-features">
                             <span class="feature-tag">< 30 segundos</span>
                             <span class="feature-tag">Email + SMS</span>
@@ -836,7 +898,7 @@
                     </div>
                     <div class="step-content">
                         <h3 class="step-title">Setup Inteligente</h3>
-                        <p class="step-description">App detecta dispositivo e configura automaticamente</p>
+                        <p class="step-description">Instale em seus dispositivos usando nosso tutorial.</p>
                         <div class="step-features">
                             <span class="feature-tag">Multi-Plataforma</span>
                             <span class="feature-tag">Auto-Sync</span>
@@ -858,7 +920,7 @@
                     </div>
                     <div class="step-content">
                         <h3 class="step-title">Experiência Total</h3>
-                        <p class="step-description">IA personaliza conteúdo baseado no seu comportamento</p>
+                        <p class="step-description">Faça o login e aproveite todo o conteúdo disponível.</p>
                         <div class="step-features">
                             <span class="feature-tag">Recomendações IA</span>
                             <span class="feature-tag">4K/8K Ready</span>
@@ -868,7 +930,7 @@
             </div>
 
             <div class="cta-container">
-                <a href="https://pay.kirvano.com/ba4c4af3-4b87-4197-9f93-e6d430a790ec" class="futuristic-btn">
+                <a href="https://pay.kirvano.com/5b0f9344-815a-4d76-9c37-a8b4dd064162" class="futuristic-btn">
                     <span class="btn-text">Iniciar Jornada</span>
                     <div class="btn-effect"></div>
                     <div class="btn-particles"></div>
@@ -944,7 +1006,7 @@
                                 <span>Resposta em 2 min</span>
                             </div>
                         </div>
-                        <a href="https://wa.me/11982542740" class="channel-btn whatsapp-btn" target="_blank">
+                        <a href="https://wa.me/11957584152" class="channel-btn whatsapp-btn" target="_blank">
                             <span>Chamar</span>
                             <div class="btn-glow"></div>
                         </a>

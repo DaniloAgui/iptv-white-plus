@@ -1767,6 +1767,414 @@ body.light-theme {
     margin: 0;
 }
 
+/* ===== DESTAQUES ESPECIAIS DOS PLANOS - CONEXÕES ===== */
+.plan-highlight {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.highlight-badge {
+    position: relative;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.highlight-icon {
+    font-size: 1.2rem;
+    animation: iconSpin 4s linear infinite;
+}
+
+.highlight-text {
+    font-family: 'JetBrains Mono', monospace;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.highlight-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+@keyframes badgeFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-8px) scale(1.05); }
+}
+
+@keyframes iconSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* DESTAQUE BÁSICO - 1 CONEXÃO */
+.basic-highlight .highlight-badge {
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: white;
+    border: 2px solid rgba(0, 212, 255, 0.4);
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(0, 212, 255, 0.6);
+    border-radius: 50%;
+    animation: pulsateRing 2s cubic-bezier(0.25, 0, 0, 1) infinite;
+}
+
+.pulse-delay-1 {
+    animation-delay: 0.7s;
+}
+
+.pulse-delay-2 {
+    animation-delay: 1.4s;
+}
+
+@keyframes pulsateRing {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+/* DESTAQUE PREMIUM - 2 CONEXÕES */
+.premium-highlight .highlight-badge {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    border: 2px solid rgba(255, 107, 53, 0.4);
+}
+
+.electric-bolt {
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background: linear-gradient(180deg, #ff6b35, #f7931e);
+    border-radius: 2px;
+    animation: electricBolt 1.5s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.8);
+}
+
+.bolt-delay-1 {
+    animation-delay: 0.5s;
+    transform: rotate(45deg);
+}
+
+.electric-spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: sparkle 2s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes electricBolt {
+    0%, 100% { 
+        transform: scaleY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% { 
+        transform: scaleY(1) rotate(15deg);
+        opacity: 1;
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% { 
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+/* DESTAQUE DIAMOND - 3 CONEXÕES */
+.diamond-highlight .highlight-badge {
+    background: linear-gradient(135deg, #b794f6, #9f7aea);
+    color: white;
+    border: 2px solid rgba(183, 148, 246, 0.4);
+}
+
+.diamond-glow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(183, 148, 246, 0.4), transparent);
+    border-radius: 50%;
+    animation: diamondGlow 3s ease-in-out infinite;
+}
+
+.diamond-sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    animation: diamondSparkle 2s ease-in-out infinite;
+}
+
+.sparkle-1 {
+    top: 10px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.sparkle-2 {
+    top: 30px;
+    right: 15px;
+    animation-delay: 0.5s;
+}
+
+.sparkle-3 {
+    bottom: 20px;
+    left: 10px;
+    animation-delay: 1s;
+}
+
+.sparkle-4 {
+    bottom: 10px;
+    right: 25px;
+    animation-delay: 1.5s;
+}
+
+@keyframes diamondGlow {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes diamondSparkle {
+    0%, 100% { 
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% { 
+        transform: scale(1.5) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* DESTAQUE PLATINUM - 5 CONEXÕES */
+.platinum-highlight .highlight-badge {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #1a1a1a;
+    border: 2px solid rgba(255, 215, 0, 0.6);
+    font-weight: 900;
+}
+
+.cosmic-ring {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 3px solid rgba(255, 215, 0, 0.6);
+    border-radius: 50%;
+    animation: cosmicRing 4s linear infinite;
+}
+
+.ring-delay-1 {
+    animation-delay: 1.3s;
+    width: 140px;
+    height: 140px;
+    border-width: 2px;
+}
+
+.ring-delay-2 {
+    animation-delay: 2.6s;
+    width: 160px;
+    height: 160px;
+    border-width: 1px;
+}
+
+.nebula-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2), rgba(255, 237, 78, 0.1), transparent);
+    border-radius: 50%;
+    animation: nebulaGlow 6s ease-in-out infinite;
+}
+
+.star-field {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+}
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    animation: starTwinkle 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.star-1 {
+    top: 20px;
+    left: 30px;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 50px;
+    right: 25px;
+    animation-delay: 0.6s;
+}
+
+.star-3 {
+    bottom: 40px;
+    left: 20px;
+    animation-delay: 1.2s;
+}
+
+.star-4 {
+    bottom: 20px;
+    right: 40px;
+    animation-delay: 1.8s;
+}
+
+.star-5 {
+    top: 40%;
+    left: 50%;
+    animation-delay: 2.4s;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes cosmicRing {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(360deg) scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes nebulaGlow {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: scale(1.3) rotate(180deg);
+        opacity: 0.7;
+    }
+}
+
+@keyframes starTwinkle {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: scale(1.5);
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+
+/* EFEITOS DE HOVER PARA OS DESTAQUES */
+.plan-card:hover .highlight-badge {
+    animation-duration: 1.5s;
+    transform: scale(1.1);
+}
+
+.plan-card:hover .pulse-ring {
+    animation-duration: 1s;
+}
+
+.plan-card:hover .electric-bolt {
+    animation-duration: 0.8s;
+    box-shadow: 0 0 30px rgba(255, 107, 53, 1);
+}
+
+.plan-card:hover .diamond-glow {
+    animation-duration: 2s;
+}
+
+.plan-card:hover .cosmic-ring {
+    animation-duration: 2.5s;
+}
+
+.plan-card:hover .star {
+    animation-duration: 1.5s;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+}
+
+/* RESPONSIVIDADE PARA MOBILE */
+@media (max-width: 768px) {
+    .plan-highlight {
+        top: -10px;
+        right: -10px;
+    }
+    
+    .highlight-badge {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .pulse-ring,
+    .diamond-glow,
+    .cosmic-ring {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .ring-delay-1 {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .ring-delay-2 {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .nebula-glow {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .star-field {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 /* FEATURE COMPARISON */
 .feature-comparison {
     margin-top: 4rem;
